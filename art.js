@@ -21,13 +21,13 @@
 
 const ARTWORKS = [
   {
-    id: "sample-1",
-    title: "The Starry Night",
-    artist: "Vincent van Gogh",
-    year: "1889",
-    image: "images/sample-1.svg",
+    id: "Watchers in the Night Thomas BlackHeath",
+    title: "Watchers in the Night",
+    artist: "Thomas Blackshear II",
+    year: "2001",
+    image: "Watchers in the Night Thomas BlackHeath.jpg",
     description:
-      "This is a placeholder description. Replace this with your own analysis of the piece — what draws you to it, how it makes you feel, what the artist was doing technically or historically, or anything else you want to say about it.\n\nYou can write multiple paragraphs — just leave a blank line (using \\n\\n) between them, like this one."
+      "This work depicts a winged angel with a flame and spear standing guard over a sleeping child. Representitive of the guardian angel assigned to protect every one of us and especially God's beloved children."
   },
   {
     id: "sample-2",
