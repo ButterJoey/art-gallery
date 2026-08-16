@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">My Gallery</h1>
+    <p class="site-subtitle">A collection of art I love, with my own thoughts on each piece.</p>
+  </header>
+
+  <main>
+    <div id="gallery-grid" class="gallery-grid">
+      <!-- Artwork cards are inserted here by main.js -->
+    </div>
+  </main>
+
+  <!-- Modal / lightbox -->
+  <div id="modal-overlay" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-content">
+        <div class="modal-image-wrap">
+          <img id="modal-image" src="" alt="">
+        </div>
+        <div class="modal-text">
+          <h2 id="modal-title"></h2>
+          <p id="modal-meta" class="modal-meta"></p>
+          <div id="modal-description" class="modal-description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Made with care.</p>
+  </footer>
+
+  <script src="art.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
