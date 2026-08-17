@@ -139,20 +139,18 @@ main {
 .modal-content {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
+  align-items: start;
 }
 
 .modal-image-wrap {
   background: #f2f1ef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .modal-image-wrap img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   max-height: 88vh;
+  object-fit: contain;
   display: block;
 }
 
