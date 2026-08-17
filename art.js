@@ -25,7 +25,7 @@ const ARTWORKS = [
     title: "Watchers in the Night",
     artist: "Thomas Blackshear II",
     year: "2001",
-    image: "Watchers in the Night Thomas BlackHeath.jpg",
+    image: "images/Watchers in the Night Thomas BlackHeath.jpg",
     description:
       "This work depicts a winged angel with a flame and spear standing guard over a sleeping child. Representitive of the guardian angel assigned to protect every one of us and especially God's beloved children."
   },
