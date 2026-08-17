@@ -27,15 +27,15 @@ const ARTWORKS = [
     year: "2001",
     image: "images/Watchers in the Night Thomas BlackHeath.jpg",
     description:
-      "This work depicts a winged angel with a flame and spear standing guard over a sleeping child. Representitive of the guardian angel assigned to protect every one of us and especially God's beloved children."
+      "This work depicts a winged angel with a flame and spear standing guard over a sleeping child. Showing God's protection of the most vulnerable."
   },
   {
-    id: "sample-2",
-    title: "Untitled",
-    artist: "Artist Name",
-    year: "Year",
-    image: "images/sample-2.svg",
+    id: "The Battle of the Nile",
+    title: "The Battle of the Nile",
+    artist: "George Arnald",
+    year: "Between 1825 and 1827",
+    image: "images/The Battle of the Nile.jpg",
     description:
-      "Another placeholder entry, just to show how the grid looks with more than one piece in it. Swap the image, title, artist, year, and this text for a real artwork whenever you're ready."
+      "This scene depicts one of Admiral Nelson's greatest battles. The Battle of the Nile was the naval battle between the British naval task force led by Admiral Horatio Nelson and the French fleet led by Admiral François-Paul Brueys d'Aigalliers. The French fleet was anchored just off the coast of Egypt, having recently deployed Napoleon and his army in the efforts to take Cairo. The specific moment this piece captures is during the later part of the engagement when a fire reached the ammunition storage of the L'Orient, the French Flagship."
   }
 ];
