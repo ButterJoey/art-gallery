@@ -37,5 +37,14 @@ const ARTWORKS = [
     image: "images/The Battle of the Nile.jpg",
     description:
       "This scene depicts one of Admiral Nelson's greatest battles. The Battle of the Nile was the naval battle between the British naval task force led by Admiral Horatio Nelson and the French fleet led by Admiral François-Paul Brueys d'Aigalliers. The French fleet was anchored just off the coast of Egypt, having recently deployed Napoleon and his army in the efforts to take Cairo. The specific moment this piece captures is during the later part of the engagement when a fire reached the ammunition storage of the L'Orient, the French Flagship."
+  },
+  {
+    id: "The Battle of the Pyramids",
+    title: "The Battle of the Pyramids",
+    artist: "Antoine-Jean Gros",
+    year: "1810",
+    image: "images/The Battle of the Pyramids.jpg",
+    description:
+      "On July 21, 1798, near Embabeh, a village near Cairo, Napoleon clashed with Murad Bey and Ibrahim Bey, leaders of the Egyptian and Mamluk forces. Napoleon used divisional square formations to wipe out the Mamluk cavalry before counterattacking the fortified village of Embabeh. The battle was a decisive victory for the French with only 300 casualties, while the Egyptian/Mamluk forces had an estimated 2,000-6,000 casualties, opening Cairo to French occupation."
   }
 ];
