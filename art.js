@@ -46,5 +46,14 @@ const ARTWORKS = [
     image: "images/The Battle of the Pyramids.jpg",
     description:
       "On July 21, 1798, near Embabeh, a village near Cairo, Napoleon clashed with Murad Bey and Ibrahim Bey, leaders of the Egyptian and Mamluk forces. Napoleon used divisional square formations to wipe out the Mamluk cavalry before counterattacking the fortified village of Embabeh. The battle was a decisive victory for the French with only 300 casualties, while the Egyptian/Mamluk forces had an estimated 2,000-6,000 casualties, opening Cairo to French occupation."
+  },
+  {
+    id: "Alexander the Great Refuses Water in the Desert",
+    title: "Alexander the Great Refuses Water in the Desert",
+    artist: "Tom Lovell",
+    year: "1968",
+    image: "images/Alexander the Great Refuses Water in the Desert.jpeg",
+    description:
+      "Around 325 BC, Alexander the Great returns from his conquest in India. His journey takes him through the deadly Gedrosian Desert, his army is dangerously dehydrated and exhausted. A soldier managed to find some water and gave it to Alexander in a helmet, however, in a genius stroke of leadership, he spilled the water on the ground. Alexander shows his solidarity to his men, not willing to let his men suffer while he does not."
   }
 ];
