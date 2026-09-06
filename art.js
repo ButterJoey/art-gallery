@@ -55,5 +55,14 @@ const ARTWORKS = [
     image: "images/Alexander the Great Refuses Water in the Desert.jpeg",
     description:
       "Around 325 BC, Alexander the Great returns from his conquest in India. His journey takes him through the deadly Gedrosian Desert, his army is dangerously dehydrated and exhausted. A soldier managed to find some water and gave it to Alexander in a helmet, however, in a genius stroke of leadership, he spilled the water on the ground. Alexander shows his solidarity to his men, not willing to let his men suffer while he does not."
+  },
+  {
+    id: "The British Squares Receiving the Charge of the French Cuirassiers",
+    title: "The British Squares Receiving the Charge of the French Cuirassiers",
+    artist: "Félix Henri Emmanuel Philippoteaux",
+    year: "1874",
+    image: "images/The British Squares Receiving the Charge of the French Cuirassiers.jpg",
+    description:
+      "18 June 1815, Napoleon's last battle, the Battle of Waterloo. There are many paintings of the infamous battle however this one depict the famous British infantry squares repelling the French cavalry, a pivotal point of the battle."
   }
 ];
