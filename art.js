@@ -57,12 +57,21 @@ const ARTWORKS = [
       "Around 325 BC, Alexander the Great returns from his conquest in India. His journey takes him through the deadly Gedrosian Desert, his army is dangerously dehydrated and exhausted. A soldier managed to find some water and gave it to Alexander in a helmet, however, in a genius stroke of leadership, he spilled the water on the ground. Alexander shows his solidarity to his men, not willing to let his men suffer while he does not."
   },
   {
-    id: "The British Squares Receiving the Charge of the French Cuirassiers",
+    id: "The British Squares Receiving the Charge of the French Cuirassiers", 
     title: "The British Squares Receiving the Charge of the French Cuirassiers",
     artist: "Félix Henri Emmanuel Philippoteaux",
     year: "1874",
     image: "images/The British Squares Receiving the Charge of the French Cuirassiers.jpg",
     description:
-      "18 June 1815, Napoleon's last battle, the Battle of Waterloo. There are many paintings of the infamous battle however this one depict the famous British infantry squares repelling the French cavalry, a pivotal point of the battle."
+      "18 June 1815, Napoleon's last battle, the Battle of Waterloo. There are many paintings of the infamous battle however, this one depicts the famous British infantry squares repelling the French cavalry, a pivotal point of the battle."
+  },
+  {
+    id: "Running the Batteries",
+    title: "Running the Batteries",
+    artist: "Kurz & Allison",
+    year: "1888",
+    image: "images/Running the Batteries.jpg",
+    description:
+      "On April 16, 1863, the Union forces ran the artillery emplacements past Vicksburg. While \"running its guns,\" the captains figured out that the city's guns could only depress so low, leading them to sail as close to the shore as possible to avoid cannon fire. This lithograph was created in 1888 commemorating the 25th anniversary of the victory over Vicksburg."
   }
 ];
