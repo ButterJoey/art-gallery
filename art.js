@@ -57,7 +57,7 @@ const ARTWORKS = [
       "Around 325 BC, Alexander the Great returns from his conquest in India. His journey takes him through the deadly Gedrosian Desert, his army is dangerously dehydrated and exhausted. A soldier managed to find some water and gave it to Alexander in a helmet, however, in a genius stroke of leadership, he spilled the water on the ground. Alexander shows his solidarity to his men, not willing to let his men suffer while he does not."
   },
   {
-    id: "The British Squares Receiving the Charge of the French Cuirassiers", 
+    id: "The British Squares Receiving the Charge of the French Cuirassiers",
     title: "The British Squares Receiving the Charge of the French Cuirassiers",
     artist: "Félix Henri Emmanuel Philippoteaux",
     year: "1874",
@@ -73,5 +73,14 @@ const ARTWORKS = [
     image: "images/Running the Batteries.jpg",
     description:
       "On April 16, 1863, the Union forces ran the artillery emplacements past Vicksburg. While \"running its guns,\" the captains figured out that the city's guns could only depress so low, leading them to sail as close to the shore as possible to avoid cannon fire. This lithograph was created in 1888 commemorating the 25th anniversary of the victory over Vicksburg."
-  }
+  },
+  {
+    id: "Bombardment of Fort McHenry", 
+    title: "Bombardment of Fort McHenry",
+    artist: "Peter Spier",
+    year: "1973",
+    image: "images/Bombardment of Fort Mchenry.jpg",
+    description:
+      "Peter Spier, a Dutch-American illustrator known for detailed pen-and-ink line work layered with watercolor washes. In his 1973 picture book, The Star-Spangled Banner he depicts the famous bombardment of September 13–14, 1814, during the War of 1812 that led to the creation of the United States national anthem, \"The Star-Spangled Banner.\" After Washington DC was burned by the British, the Royal Navy moved to take Baltimore. The British first attempted a land invasion but they were thwearted when Major General Robert Ross who was leading the operation, was killed by a sharpshooter. The militia and citizens of Baltimore decided to scuttle their merchant ships at the entrance of the harbor. This forced the British to prepare for a naval assault, which required the destruction of Fort McHenry. After 25 hours of bombardment, the Fort was still standing, and the Baltimoreans were able to repel the British invasion of their city."
+  },
 ];
