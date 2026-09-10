@@ -38,7 +38,7 @@ function openModal(art) {
   modalImage.src = art.image;
   modalImage.alt = art.title;
   modalTitle.textContent = art.title;
-  modalMeta.textContent = `${art.artist}${art.year ? " · " + art.year : ""}`;
+  modalMeta.textContent = `${art.artist}${art.year ? " · " + art.year : ""}${art.medium ? " · " + art.medium : ""}`;
 
   modalDescription.innerHTML = art.description
     .split("\n\n")
