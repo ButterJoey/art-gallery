@@ -90,5 +90,15 @@ const ARTWORKS = [
     image: "images/Bombardment of Fort Mchenry.jpg",
     description:
       "Peter Spier, a Dutch-American illustrator known for detailed pen-and-ink line work layered with watercolor washes. In his 1973 picture book, The Star-Spangled Banner he depicts the famous bombardment of September 13–14, 1814, during the War of 1812 that led to the creation of the United States national anthem, \"The Star-Spangled Banner.\" After Washington DC was burned by the British, the Royal Navy moved to take Baltimore. The British first attempted a land invasion but they were thwearted when Major General Robert Ross who was leading the operation, was killed by a sharpshooter. The militia and citizens of Baltimore decided to scuttle their merchant ships at the entrance of the harbor. This forced the British to prepare for a naval assault, which required the destruction of Fort McHenry. After 25 hours of bombardment, the Fort was still standing, and the Baltimoreans were able to repel the British invasion of their city."
-  }
+  },
+  {
+    id: "The Death of Nelson, 21 October 1805",
+    title: "The Death of Nelson, 21 October 1805",
+    artist: "Arthur William Devis",
+    year: "1807",
+    medium: "Oil on canvas",
+    image: "images/The Death of Nelson, 21 October 1805.jpg",
+    description:
+      "October 21, 1805, a tragic day in British history. The Battle of Trafalgar would define British maritime supremacy for the next 140 years. Admiral Horatio Nelson, with a fleet of 27 ships of the line, 4 frigates, 1 schooner, and 1 cutter, would face off against the joint French-Spanish fleet led by Pierre-Charles Villeneuve and Federico Gravina, composed of 33 ships of the line, 5 frigates, and 2 brigs. In a unorthodox stroke of genius Nelson charged the French-Spanish fleet (which was sailing North) from the East, crossing their T. He conducted this manuvour with two British columns, leading the Northernmost column with his own flagship, HMS Victory. After a successful approach, Nelson had split the French-Spanish Fleet in half, forcing the Northernmost French ships of the line into a painstakingly long U-turn back into the fight. The slugfest that ensued led to close ship-to-ship combat, point-blank broadsides and boardings. During the fray, while Nelson was walking along the quarterdeck, a sniper from the opposing French Redoutable fired from atop its rigging. Nelson was shot at 1:15 pm, puncturing his left shoulder and going through his ribs and spine before puncturing his lungs, causing his death at 4:30 pm." 
+  },
 ];
