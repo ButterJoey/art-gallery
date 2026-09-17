@@ -27,6 +27,16 @@
 
 const ARTWORKS = [
   {
+    id: "Watchers in the Night Thomas BlackHeath",
+    title: "Watchers in the Night",
+    artist: "Thomas Blackshear II",
+    year: "2001",
+    medium: "Oil on canvas",
+    image: "images/Watchers in the Night Thomas BlackHeath.jpg",
+    description:
+      "This work depicts a winged angel with a flame and spear standing guard over a sleeping child. Showing God's protection of the most vulnerable."
+  },
+  {
     id: "Running the Batteries",
     title: "Running the Batteries",
     artist: "Kurz & Allison",
@@ -115,15 +125,5 @@ const ARTWORKS = [
     image: "images/Alexander the Great Refuses Water in the Desert.jpeg",
     description:
       "Around 325 BC, Alexander the Great returns from his conquest in India. His journey takes him through the deadly Gedrosian Desert, his army is dangerously dehydrated and exhausted. A soldier managed to find some water and gave it to Alexander in a helmet, however, in a genius stroke of leadership, he spilled the water on the ground. Alexander shows his solidarity to his men, not willing to let his men suffer while he does not."
-  },
-  {
-    id: "Watchers in the Night Thomas BlackHeath",
-    title: "Watchers in the Night",
-    artist: "Thomas Blackshear II",
-    year: "2004",
-    medium: "Oil on canvas",
-    image: "images/Watchers in the Night Thomas BlackHeath.jpg",
-    description:
-      "This work depicts a winged angel with a flame and spear standing guard over a sleeping child. Showing God's protection of the most vulnerable."
   }
 ];
