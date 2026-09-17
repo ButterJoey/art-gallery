@@ -111,4 +111,14 @@ const ARTWORKS = [
     description:
       "This piece illustrates the aftermath of the Fall of Constantinople, 1453. An Ottoman Sipahi (professional cavalryman) looks down at a fallen Aragonese mercenary (Elite Infantryman) after the fall of the city, with a Byzantine flag on the floor beside him. This defining moment in history was the end of the Byzantine Empire, ending the Roman imperial legacy in the world. Many historians use this point as the end of Medieval times and the beginning of the modern era."
   },
+  {
+    id: "The Battle of Lodi",
+    title: "The Battle of Lodi",
+    artist: "Louis-François Lejeune",
+    year: "1804",
+    medium: "Oil on Canvas",
+    image: "images/The Battle of Lodi.jpg",
+    description:
+      "This piece depicts the Battle of Lodi, where Napoleon was convinced that he was a man of destiny. The battle took place on 10 May 1796, in the Italian campaign during the French Revolutionary Wars. Napoleon is shown in the lower left, mounted and giving orders to charge through the bridge, leading to immediate casualties but an ultimate victory. The painting was produced the same year Napoleon would declare himself Emperor of France."
+  },
 ];
