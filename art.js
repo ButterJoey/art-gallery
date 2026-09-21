@@ -107,6 +107,16 @@ const ARTWORKS = [
       "This piece depicts the Battle of Lodi, where Napoleon was convinced that he was a man of destiny. The battle took place on 10 May 1796, in the Italian campaign during the French Revolutionary Wars. Napoleon is shown in the lower left, mounted and giving orders to charge through the bridge, leading to immediate casualties but an ultimate victory. The painting was produced the same year Napoleon would declare himself Emperor of France."
   },
   {
+    id: "Battle of Long Island",
+    title: "Battle of Long Island",
+    artist: "Alonzo Chappel",
+    year: "1858",
+    medium: "Oil on Canvas",
+    image: "images/Battle of Long Island (1858).jpg",
+    description:
+      "This painting depicts the later parts of the Battle of Long Island, August 27–29, 1776. General William Howe, commander of the British Forces in North America, surrounded the Continental forces on Long Island, NY. During the retreat back across the East River, the 1st Maryland Regiment, seeing the looming massacre they organized themselves into battle lines and assaulted the approaching British forces with bayonets. Their attack was repelled three times, and yet three times they charged, each time with significantly fewer men. Their heroic actions would save the Continental Army and the American Revolution. George Washington named the sacrificial 1st Maryland Regiment the Old Line, leading to the naming of Maryland as the Old Line State."
+  },
+  {
     id: "Ottoman Sipahi and Aragonese Mercenary",
     title: "Ottoman Sipahi and Aragonese Mercenary",
     artist: "Jose Daniel Cabrera Peña",
