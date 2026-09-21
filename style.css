@@ -222,20 +222,6 @@ main {
   display: block;
 }
 
-.modal-image-wrap img.zoomable {
-  cursor: zoom-in;
-  transition: transform 0.25s ease;
-}
-
-.modal-image-wrap img.zoomable.zoomed {
-  cursor: zoom-out;
-  transform: scale(1.8);
-}
-
-.modal-image-wrap {
-  overflow: hidden;
-}
-
 .modal-text {
   padding: 40px 36px;
 }

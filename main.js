@@ -1,6 +1,6 @@
 /*
   Renders the gallery grid from ARTWORKS (defined in art.js),
-  handles search filtering, and the modal (with zoom + prev/next).
+  handles search filtering, and the modal (with prev/next).
   You shouldn't need to edit this file to add new art — just edit art.js.
 */
 
@@ -70,7 +70,6 @@ function renderGrid() {
 }
 
 function openModal(art) {
-  modalImage.classList.remove("zoomed");
   modalImage.src = art.image;
   modalImage.alt = art.title;
   modalTitle.textContent = art.title;
@@ -105,10 +104,6 @@ function closeModal() {
 modalClose.addEventListener("click", closeModal);
 modalPrev.addEventListener("click", () => showByOffset(-1));
 modalNext.addEventListener("click", () => showByOffset(1));
-
-modalImage.addEventListener("click", () => {
-  modalImage.classList.toggle("zoomed");
-});
 
 overlay.addEventListener("click", (e) => {
   if (e.target === overlay) closeModal();
