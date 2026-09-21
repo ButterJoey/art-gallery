@@ -1,10 +1,12 @@
 /* ---------- Base ---------- */
 :root {
-  --bg: #ffffff;
-  --text: #1a1a1a;
-  --text-muted: #6b6b6b;
-  --border: #e7e5e2;
-  --accent: #1a1a1a;
+  --bg-page: #f2ece0;       /* warm cream "gallery wall" */
+  --surface: #fffcf7;       /* card / paper surface */
+  --text: #2b2620;
+  --text-muted: #8a7f6c;
+  --border: #e2d7c3;
+  --accent: #2b2620;
+  --shadow: 0 2px 6px rgba(43, 38, 32, 0.06), 0 8px 24px rgba(43, 38, 32, 0.08);
   --max-width: 1200px;
 }
 
@@ -14,7 +16,7 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--bg-page);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -58,7 +60,7 @@ body {
   border-radius: 6px;
   font-family: inherit;
   color: var(--text);
-  background: var(--bg);
+  background: var(--surface);
 }
 
 .search-input:focus {
@@ -88,18 +90,26 @@ main {
 .art-card {
   cursor: pointer;
   border: none;
-  background: none;
-  padding: 0;
+  background: var(--surface);
+  padding: 14px 14px 18px;
+  border-radius: 8px;
   text-align: left;
   font: inherit;
   color: inherit;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.art-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(43, 38, 32, 0.08), 0 14px 32px rgba(43, 38, 32, 0.12);
 }
 
 .art-card-image-wrap {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #f2f1ef;
+  background: var(--border);
   border-radius: 4px;
 }
 
@@ -149,13 +159,14 @@ main {
 }
 
 .modal {
-  background: var(--bg);
+  background: var(--surface);
   max-width: 1000px;
   width: 100%;
   max-height: 88vh;
   overflow-y: auto;
   border-radius: 6px;
   position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .modal-close {
@@ -208,7 +219,7 @@ main {
 }
 
 .modal-image-wrap {
-  background: #f2f1ef;
+  background: var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
