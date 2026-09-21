@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Few of my Favorite Things</title>
+
+<!-- Social preview (shows up when the link is shared in iMessage, Discord, etc.) -->
+<meta name="description" content="Pieces I love, with my own thoughts on each piece.">
+<meta property="og:title" content="A Few of my Favorite Things">
+<meta property="og:description" content="Pieces I love, with my own thoughts on each piece.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Few of my Favorite Things">
+<meta name="twitter:description" content="Pieces I love, with my own thoughts on each piece.">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,19 +23,32 @@
     <p class="site-subtitle">Pieces I love, with my own thoughts on each piece.</p>
   </header>
 
+  <div class="controls">
+    <input
+      type="text"
+      id="search-input"
+      class="search-input"
+      placeholder="Search by title or artist…"
+      aria-label="Search artworks"
+    >
+  </div>
+
   <main>
     <div id="gallery-grid" class="gallery-grid">
       <!-- Artwork cards are inserted here by main.js -->
     </div>
+    <p id="no-results" class="no-results" hidden>No pieces match your search.</p>
   </main>
 
   <!-- Modal / lightbox -->
   <div id="modal-overlay" class="modal-overlay" hidden>
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      <button id="modal-prev" class="modal-nav modal-prev" aria-label="Previous artwork">&#8249;</button>
+      <button id="modal-next" class="modal-nav modal-next" aria-label="Next artwork">&#8250;</button>
       <div class="modal-content">
         <div class="modal-image-wrap">
-          <img id="modal-image" src="" alt="">
+          <img id="modal-image" src="" alt="" class="zoomable">
         </div>
         <div class="modal-text">
           <h2 id="modal-title"></h2>
