@@ -18,9 +18,13 @@
   - title:       the artwork's title
   - artist:      the artist's name
   - year:        year or date made (can be a string like "c. 1889" or "Unknown")
+  - depicted:    (optional) year of the event/scene shown, e.g. "1815" or "325 BC".
+                 Shown as a small badge on the gallery tile.
+  - featured:    (optional) true = this piece slides in behind the JIST intro
+                 and gets a large "Featured" tile. Only one piece should have it.
   - medium:      what it's made of/with (e.g. "Oil on canvas", "Watercolor", "Lithograph")
   - tags:        an array of category labels, e.g. ["Napoleonic Wars"].
-                 Stored for future use — not yet shown/filterable on the site.
+                 These drive the era menu (see ERA_MENU at the bottom of this file).
   - image:       path to the image file inside the images/ folder
   - description: YOUR analysis/writeup. Can be as long as you like.
                  Use \n\n inside the string to create a paragraph break.
@@ -38,6 +42,7 @@ const ARTWORKS = [
     title: "Watchers in the Night",
     artist: "Thomas Blackshear II",
     year: "2001",
+    depicted: "2004",
     medium: "Oil on canvas",
     tags: ["Religious / Allegorical"],
     image: "images/Watchers in the Night Thomas BlackHeath.jpg",
@@ -48,6 +53,7 @@ const ARTWORKS = [
     title: "Running the Batteries",
     artist: "Kurz & Allison",
     year: "1888",
+    depicted: "1863",
     medium: "Lithograph",
     tags: ["American Civil War"],
     image: "images/Running the Batteries.jpg",
@@ -58,6 +64,7 @@ const ARTWORKS = [
     title: "The British Squares Receiving the Charge of the French Cuirassiers",
     artist: "Félix Henri Emmanuel Philippoteaux",
     year: "1874",
+    depicted: "1815",
     medium: "Oil on canvas",
     tags: ["Napoleonic Wars"],
     image: "images/The British Squares Receiving the Charge of the French Cuirassiers.jpg",
@@ -68,6 +75,7 @@ const ARTWORKS = [
     title: "Bombardment of Fort McHenry",
     artist: "Peter Spier",
     year: "1973",
+    depicted: "1814",
     medium: "Pen-and-ink and watercolor",
     tags: ["War of 1812", "American History"],
     image: "images/Bombardment of Fort Mchenry.jpg",
@@ -78,6 +86,8 @@ const ARTWORKS = [
     title: "The Death of Nelson, 21 October 1805",
     artist: "Arthur William Devis",
     year: "1807",
+    depicted: "1805",
+    featured: true,
     medium: "Oil on canvas",
     tags: ["Napoleonic Wars"],
     image: "images/The Death of Nelson, 21 October 1805.jpg",
@@ -88,6 +98,7 @@ const ARTWORKS = [
     title: "The Battle of the Nile",
     artist: "George Arnald",
     year: "Between 1825 and 1827",
+    depicted: "1798",
     medium: "Oil on canvas",
     tags: ["Napoleonic Wars"],
     image: "images/The Battle of the Nile.jpg",
@@ -98,6 +109,7 @@ const ARTWORKS = [
     title: "The Battle of the Pyramids",
     artist: "Antoine-Jean Gros",
     year: "1810",
+    depicted: "1798",
     medium: "Oil on canvas",
     tags: ["Napoleonic Wars"],
     image: "images/The Battle of the Pyramids.jpg",
@@ -108,6 +120,7 @@ const ARTWORKS = [
     title: "The Battle of Lodi",
     artist: "Louis-François Lejeune",
     year: "1804",
+    depicted: "1796",
     medium: "Oil on Canvas",
     tags: ["Napoleonic Wars"],
     image: "images/The Battle of Lodi.jpg",
@@ -118,6 +131,7 @@ const ARTWORKS = [
     title: "Battle of Long Island",
     artist: "Alonzo Chappel",
     year: "1858",
+    depicted: "1776",
     medium: "Oil on Canvas",
     tags: ["American Revolution"],
     image: "images/Battle of Long Island (1858).jpg",
@@ -138,10 +152,25 @@ const ARTWORKS = [
     title: "Alexander the Great Refuses Water in the Desert",
     artist: "Tom Lovell",
     year: "1968",
+    depicted: "325 BC",
     medium: "Tempera with wax on canvas",
     tags: ["Ancient History"],
     image: "images/Alexander the Great Refuses Water in the Desert.jpeg",
     description:
       "Around 325 BC, Alexander the Great returns from his conquest in India. His journey takes him through the deadly Gedrosian Desert, his army is dangerously dehydrated and exhausted. A soldier managed to find some water and gave it to Alexander in a helmet, however, in a genius stroke of leadership, he spilled the water on the ground. Alexander shows his solidarity to his men, not willing to let his men suffer while he does not."
   }
+];
+
+/*
+  ERA MENU
+  ========
+  The big menu at the top right. Each entry shows every piece that has
+  at least one of the listed tags. "All" is added automatically.
+  If you add a piece with a brand-new tag, add that tag to one of these.
+*/
+const ERA_MENU = [
+  { label: "Napoleonic", tags: ["Napoleonic Wars"] },
+  { label: "American", tags: ["American Revolution", "American Civil War", "War of 1812", "American History"] },
+  { label: "Ancient", tags: ["Ancient History", "Ottoman / Byzantine History"] },
+  { label: "Modern", tags: ["Religious / Allegorical"] },
 ];

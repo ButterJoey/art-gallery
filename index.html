@@ -3,24 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Few of my Favorite Things</title>
+<title>JIST Gallery</title>
 
 <!-- Social preview (shows up when the link is shared in iMessage, Discord, etc.) -->
 <meta name="description" content="Pieces I love, with my own thoughts on each piece.">
-<meta property="og:title" content="A Few of my Favorite Things">
+<meta property="og:title" content="JIST Gallery">
 <meta property="og:description" content="Pieces I love, with my own thoughts on each piece.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A Few of my Favorite Things">
+<meta name="twitter:title" content="JIST Gallery">
 <meta name="twitter:description" content="Pieces I love, with my own thoughts on each piece.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="intro-active">
 
-  <header class="site-header">
-    <h1 class="site-title">A Few of my Favorite Things</h1>
-    <p class="site-subtitle">Pieces I love, with my own thoughts on each piece.</p>
+  <!-- Intro / hero. main.js steps it through the animation by adding classes. -->
+  <header id="intro" class="intro">
+    <div class="intro-panel"></div>
+    <div class="intro-art">
+      <img id="intro-image" src="" alt="">
+      <div class="intro-scrim"></div>
+    </div>
+
+    <h1 class="intro-word" aria-label="JIST Gallery">JIST</h1>
+
+    <nav id="era-nav" class="era-nav" aria-label="Filter by era">
+      <!-- Era buttons are inserted here by main.js -->
+    </nav>
+
+    <div class="intro-caption">
+      <button id="intro-featured" class="intro-featured" type="button">
+        <span class="intro-featured-label">Featured piece</span>
+        <span id="intro-featured-title" class="intro-featured-title"></span>
+      </button>
+      <div class="intro-actions">
+        <button id="intro-enter" class="intro-enter" type="button">Enter gallery ↓</button>
+        <button id="intro-replay" class="intro-replay" type="button">↺ Replay intro</button>
+      </div>
+    </div>
   </header>
 
   <div class="controls">
@@ -35,7 +59,7 @@
 
   <main>
     <div id="gallery-grid" class="gallery-grid">
-      <!-- Artwork cards are inserted here by main.js -->
+      <!-- Artwork tiles are inserted here by main.js -->
     </div>
     <p id="no-results" class="no-results" hidden>No pieces match your search.</p>
   </main>
