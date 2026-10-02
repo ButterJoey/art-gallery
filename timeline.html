@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline · JIST Gallery</title>
+
+<!-- Social preview (shows up when the link is shared in iMessage, Discord, etc.) -->
+<meta name="description" content="Every piece in the JIST Gallery, placed at the moment it depicts.">
+<meta property="og:title" content="Timeline · JIST Gallery">
+<meta property="og:description" content="Every piece in the JIST Gallery, placed at the moment it depicts.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Timeline · JIST Gallery">
+<meta name="twitter:description" content="Every piece in the JIST Gallery, placed at the moment it depicts.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="timeline-page">
+
+  <header class="tl-banner">
+    <a href="index.html" class="tl-word" aria-label="JIST Gallery home">JIST</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">Gallery</a>
+      <a href="timeline.html" aria-current="page">Timeline</a>
+    </nav>
+    <div class="tl-banner-text">
+      <h1 class="tl-heading">Through the ages</h1>
+      <p id="tl-summary" class="tl-summary"></p>
+    </div>
+  </header>
+
+  <div class="tl-order" role="group" aria-label="Order">
+    <span class="tl-order-label">Order</span>
+    <button type="button" id="order-newest" aria-pressed="true">Newest first</button>
+    <button type="button" id="order-oldest" aria-pressed="false">Oldest first</button>
+  </div>
+
+  <div class="tl-layout">
+    <nav id="tl-rail" class="tl-rail" aria-label="Jump to era">
+      <!-- Era links are inserted here by timeline.js -->
+    </nav>
+    <main id="tl-sections" class="tl-sections">
+      <!-- Era sections are inserted here by timeline.js -->
+    </main>
+  </div>
+
+  <!-- Modal / lightbox -->
+  <div id="modal-overlay" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      <button id="modal-prev" class="modal-nav modal-prev" aria-label="Previous artwork">&#8249;</button>
+      <button id="modal-next" class="modal-nav modal-next" aria-label="Next artwork">&#8250;</button>
+      <div class="modal-content">
+        <div class="modal-image-wrap">
+          <img id="modal-image" src="" alt="">
+        </div>
+        <div class="modal-text">
+          <h2 id="modal-title"></h2>
+          <p id="modal-meta" class="modal-meta"></p>
+          <div id="modal-description" class="modal-description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Updated Weekly</p>
+  </footer>
+
+  <script src="art.js"></script>
+  <script src="modal.js"></script>
+  <script src="timeline.js"></script>
+</body>
+</html>

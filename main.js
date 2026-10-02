@@ -1,13 +1,9 @@
 /*
   Runs the JIST intro, renders the gallery grid from ARTWORKS (defined in
-  art.js), handles the era menu + search filtering, and the modal (with prev/next).
+  art.js) and handles the era menu + search filtering. The pop-up lives in modal.js.
   You shouldn't need to edit this file to add new art — just edit art.js.
 */
 
-// Skip half-filled template entries (no title or image yet) so they don't show as broken tiles.
-const PIECES = ARTWORKS.filter(
-  (art) => art.title && art.title.trim() && art.image && !art.image.endsWith("/.jpg")
-);
 const FEATURED = PIECES.find((art) => art.featured) || PIECES[0];
 const MENU = (typeof ERA_MENU !== "undefined" ? ERA_MENU : []).concat([{ label: "All", tags: null }]);
 
@@ -23,19 +19,8 @@ const grid = document.getElementById("gallery-grid");
 const noResults = document.getElementById("no-results");
 const searchInput = document.getElementById("search-input");
 
-const overlay = document.getElementById("modal-overlay");
-const modalImage = document.getElementById("modal-image");
-const modalTitle = document.getElementById("modal-title");
-const modalMeta = document.getElementById("modal-meta");
-const modalDescription = document.getElementById("modal-description");
-const modalClose = document.getElementById("modal-close");
-const modalPrev = document.getElementById("modal-prev");
-const modalNext = document.getElementById("modal-next");
-
 let searchTerm = "";
 let activeEra = "All";
-let currentList = PIECES.slice(); // the list currently on screen, for modal prev/next
-let currentIndex = -1;
 
 /* ---------- Intro ---------- */
 
@@ -122,23 +107,18 @@ function setupIntro() {
   introEnter.addEventListener("click", () => settleIntro());
   introReplay.addEventListener("click", playIntro);
   introFeatured.addEventListener("click", () => {
-    currentList = getVisibleList();
-    currentIndex = currentList.indexOf(FEATURED);
-    if (currentIndex === -1) {
-      currentList = PIECES.slice();
-      currentIndex = currentList.indexOf(FEATURED);
-    }
-    openModal(FEATURED);
+    const list = getVisibleList().includes(FEATURED) ? getVisibleList() : PIECES;
+    Modal.open(list, list.indexOf(FEATURED));
   });
 
   // While the intro is up, the first scroll / swipe / scroll key settles it.
   const settleOnScroll = () => {
-    if (!isSettled() && overlay.hidden) settleIntro();
+    if (!isSettled() && !Modal.isOpen()) settleIntro();
   };
   window.addEventListener("wheel", settleOnScroll, { passive: true });
   window.addEventListener("touchmove", settleOnScroll, { passive: true });
   document.addEventListener("keydown", (e) => {
-    if (isSettled() || !overlay.hidden) return;
+    if (isSettled() || Modal.isOpen()) return;
     if (["ArrowDown", "PageDown", " ", "End"].includes(e.key)) {
       e.preventDefault();
       settleIntro();
@@ -189,7 +169,6 @@ function getVisibleList() {
 
 function renderGrid() {
   const list = getVisibleList();
-  currentList = list;
 
   grid.innerHTML = "";
   noResults.hidden = list.length > 0;
@@ -216,62 +195,10 @@ function renderGrid() {
     // In case the image is already cached and "load" won't fire again
     if (img.complete) img.classList.add("loaded");
 
-    tile.addEventListener("click", () => {
-      currentIndex = list.indexOf(art);
-      openModal(art);
-    });
+    tile.addEventListener("click", () => Modal.open(list, list.indexOf(art)));
     grid.appendChild(tile);
   });
 }
-
-/* ---------- Modal ---------- */
-
-function openModal(art) {
-  modalImage.src = art.image;
-  modalImage.alt = art.title;
-  modalTitle.textContent = art.title;
-  modalMeta.textContent = `${art.artist}${art.year ? " · " + art.year : ""}${art.medium ? " · " + art.medium : ""}`;
-
-  modalDescription.innerHTML = art.description
-    .split("\n\n")
-    .map((para) => `<p>${para}</p>`)
-    .join("");
-
-  overlay.hidden = false;
-  document.body.style.overflow = "hidden";
-  updateNavButtons();
-}
-
-function updateNavButtons() {
-  modalPrev.style.visibility = currentList.length > 1 ? "visible" : "hidden";
-  modalNext.style.visibility = currentList.length > 1 ? "visible" : "hidden";
-}
-
-function showByOffset(offset) {
-  if (currentList.length === 0) return;
-  currentIndex = (currentIndex + offset + currentList.length) % currentList.length;
-  openModal(currentList[currentIndex]);
-}
-
-function closeModal() {
-  overlay.hidden = true;
-  document.body.style.overflow = "";
-}
-
-modalClose.addEventListener("click", closeModal);
-modalPrev.addEventListener("click", () => showByOffset(-1));
-modalNext.addEventListener("click", () => showByOffset(1));
-
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) closeModal();
-});
-
-document.addEventListener("keydown", (e) => {
-  if (overlay.hidden) return;
-  if (e.key === "Escape") closeModal();
-  if (e.key === "ArrowLeft") showByOffset(-1);
-  if (e.key === "ArrowRight") showByOffset(1);
-});
 
 searchInput.addEventListener("input", (e) => {
   searchTerm = e.target.value.trim();
