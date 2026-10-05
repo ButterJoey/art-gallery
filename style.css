@@ -1024,6 +1024,136 @@ main {
   outline-offset: 3px;
 }
 
+/* Recommendation form */
+.footer-recommend {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 48px;
+  margin: 0 24px;
+  padding: 48px 0 56px;
+  border-top: 1px solid rgba(234, 235, 229, 0.35);
+}
+
+.recommend-intro h2 {
+  margin: 0 0 14px;
+  font-weight: 800;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.recommend-intro p {
+  margin: 0;
+  max-width: 34ch;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.recommend-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
+}
+
+.rf-wide {
+  grid-column: 1 / -1;
+}
+
+.rf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rf-field span {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.rf-field input,
+.rf-field textarea {
+  min-height: 44px;
+  padding: 8px 2px;
+  border: 0;
+  border-bottom: 2px solid rgba(234, 235, 229, 0.55);
+  border-radius: 0;
+  background: transparent;
+  color: var(--bg-page);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  resize: vertical;
+}
+
+.rf-field input::placeholder {
+  color: rgba(234, 235, 229, 0.45);
+}
+
+.rf-field input:focus,
+.rf-field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--bg-page);
+}
+
+.rf-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.rf-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rf-actions button {
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  background: var(--bg-page);
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.rf-actions button:hover {
+  background: #fff;
+}
+
+.rf-actions button:focus-visible {
+  outline: 3px solid var(--bg-page);
+  outline-offset: 3px;
+}
+
+.rf-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.rf-status {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.rf-status[data-kind="error"] {
+  color: #ffd6c9;
+}
+
 /* Giant wordmark, sized to span the page and cropped slightly at the bottom */
 .footer-word {
   display: flex;
@@ -1146,6 +1276,17 @@ main {
 
   .footer-statement {
     grid-column: 1 / -1;
+  }
+
+  .footer-recommend {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 0 16px;
+    padding: 36px 0 40px;
+  }
+
+  .recommend-form {
+    grid-template-columns: 1fr;
   }
 
   .footer-bottom {
