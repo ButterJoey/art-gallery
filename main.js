@@ -205,6 +205,39 @@ searchInput.addEventListener("input", (e) => {
   renderGrid();
 });
 
+/* ---------- Era links (footer, or arriving from the timeline page) ---------- */
+
+function showEra(label) {
+  if (!MENU.some((m) => m.label === label)) return;
+  activeEra = label;
+  renderEraNav();
+  renderGrid();
+}
+
+function scrollToGallery() {
+  const behavior = prefersReducedMotion() ? "auto" : "smooth";
+  document.querySelector(".controls").scrollIntoView({ behavior, block: "start" });
+}
+
+// Footer era links filter in place instead of reloading the page
+document.getElementById("site-footer").addEventListener("click", (e) => {
+  const link = e.target.closest("a[data-era]");
+  if (!link) return;
+  e.preventDefault();
+  showEra(link.dataset.era);
+  history.replaceState(null, "", "?era=" + encodeURIComponent(link.dataset.era));
+  scrollToGallery();
+});
+
+const eraFromUrl = new URLSearchParams(location.search).get("era");
+
 renderEraNav();
 renderGrid();
 setupIntro();
+
+// index.html?era=Napoleonic → skip the intro and show that era's pieces
+if (eraFromUrl && MENU.some((m) => m.label === eraFromUrl)) {
+  settleIntro({ animate: false });
+  showEra(eraFromUrl);
+  scrollToGallery();
+}
