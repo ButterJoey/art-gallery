@@ -25,12 +25,15 @@ const orderOldest = document.getElementById("order-oldest");
 
 let newestFirst = true;
 
-// "1815" → 1815, "325 BC" → -325, "Between 1825 and 1827" → 1826, "c. 1889" → 1889
+// "1815" → 1815, "325 BC" → -325, "Between 1825 and 1827" → 1826, "c. 1889" → 1889,
+// "May 29, 1453" → 1453 (day numbers are ignored when a 3–4 digit year is present)
 function parseYear(value) {
   if (!value) return null;
   const str = String(value);
-  const nums = (str.match(/\d+/g) || []).map(Number);
+  let nums = (str.match(/\d+/g) || []).map(Number);
   if (nums.length === 0) return null;
+  const years = nums.filter((n) => n >= 100);
+  if (years.length) nums = years;
   const year = nums.reduce((a, b) => a + b, 0) / nums.length;
   return Math.round(/\bBC\b|\bBCE\b/i.test(str) ? -year : year);
 }
@@ -93,7 +96,10 @@ function renderEntry(item, list) {
   }
 
   entry.innerHTML = `
-    <div class="tl-year">${art.depicted || "—"}</div>
+    <div class="tl-when">
+      <div class="tl-year">${item.eventYear === null ? "—" : formatYear(item.eventYear)}</div>
+      ${art.depicted && art.depicted !== formatYear(item.eventYear) ? `<div class="tl-date">${art.depicted}</div>` : ""}
+    </div>
     <div class="tl-thumb"><img src="${art.image}" alt="" loading="lazy"></div>
     <div class="tl-info">
       <span class="tl-title">${art.title}</span>

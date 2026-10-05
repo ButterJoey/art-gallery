@@ -18,7 +18,8 @@
   - title:       the artwork's title
   - artist:      the artist's name
   - year:        year or date made (can be a string like "c. 1889" or "Unknown")
-  - depicted:    (optional) year of the event/scene shown, e.g. "1815" or "325 BC".
+  - depicted:    (optional) when the event/scene shown happened, e.g. "1815",
+                 "325 BC" or a full date like "May 29, 1453".
                  Shown as a small badge on the gallery tile.
   - featured:    (optional) true = this piece slides in behind the Veni Vidi intro
                  and gets a large "Featured" tile. Only one piece should have it.
@@ -142,6 +143,7 @@ const ARTWORKS = [
     title: "Ottoman Sipahi and Aragonese Mercenary",
     artist: "Jose Daniel Cabrera Peña",
     year: "2014",
+    depicted: "May 29, 1453",
     medium: "Oil on Canvas",
     tags: ["Ottoman / Byzantine History"],
     image: "images/Ottoman Sipahi and Aragonese Mercenary.jpg",

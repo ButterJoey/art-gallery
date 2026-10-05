@@ -811,6 +811,20 @@ main {
   outline-offset: 4px;
 }
 
+.tl-when {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tl-date {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
 .tl-year {
   font-weight: 800;
   font-size: clamp(48px, 5.4vw, 76px);
@@ -1193,7 +1207,7 @@ main {
     grid-template-columns: 160px minmax(0, 1fr);
   }
 
-  .tl-year {
+  .tl-when {
     grid-column: 1 / -1;
   }
 }
