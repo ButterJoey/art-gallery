@@ -39,9 +39,9 @@ const FOOTER = {
         <ul>${eraLinks}</ul>
       </nav>
     </div>
-    <div class="footer-word" aria-hidden="true">JIST</div>
+    <div class="footer-word vv-mark" aria-hidden="true"><span class="vv-rule"></span><span class="vv-line"><span>VENI</span><svg class="vv-chev" viewBox="0 0 120 116" aria-hidden="true"><polygon points="0,0 60,70 120,0 109.5,0 66.6,50 23.7,0"></polygon><polygon points="0,46 60,116 120,46 109.5,46 66.6,96 23.7,46"></polygon></svg><span>VIDI</span></span><span class="vv-rule"></span></div>
     <div class="footer-bottom">
-      <span>© ${year} JIST Gallery</span>
+      <span>© ${year} Veni Vidi</span>
       <span>Images belong to their respective artists and collections</span>
       <a href="#top" class="footer-top-link">Back to top ↑</a>
     </div>

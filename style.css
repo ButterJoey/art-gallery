@@ -35,8 +35,8 @@ button {
 /* ---------- Intro / hero ----------
    States (classes on #intro, added in order by main.js):
      is-panel   → panel wipes in from the left
-     is-word    → JIST rises
-     is-art     → featured piece slides in behind JIST
+     is-word    → the wordmark rises
+     is-art     → featured piece slides in behind it
      is-settled → shrinks into the split banner above the gallery
 */
 .intro {
@@ -102,21 +102,21 @@ button {
   opacity: 0.3;
 }
 
+/* During the intro the wordmark sits at the TOP, where battle paintings are
+   usually sky, sails or smoke, so it doesn't cover the subject. Once settled
+   it glides to the bottom of the oxblood half (top: 100% minus its own height). */
 .intro-word {
   position: absolute;
   left: 24px;
-  bottom: 96px;
+  top: 56px;
   z-index: 2;
   margin: 0;
-  font-weight: 800;
-  line-height: 0.8;
-  letter-spacing: -0.05em;
   color: var(--bg-page);
-  font-size: clamp(140px, 30vw, 460px);
+  font-size: clamp(56px, 10.5vw, 170px);
   opacity: 0;
   transform: translateY(60px);
-  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease),
-    font-size 1.1s var(--ease), bottom 1.1s var(--ease);
+  transition: opacity 0.9s var(--ease), transform 1.1s var(--ease),
+    font-size 1.1s var(--ease), top 1.1s var(--ease);
 }
 
 .intro.is-word .intro-word {
@@ -125,8 +125,46 @@ button {
 }
 
 .intro.is-settled .intro-word {
-  bottom: 40px;
-  font-size: clamp(110px, 17vw, 260px);
+  top: 100%;
+  transform: translateY(calc(-100% - 40px));
+  font-size: clamp(40px, 5.6vw, 100px);
+}
+
+/* ---------- Veni Vidi wordmark ----------
+   Roman capitals between two carved rules, with the chevrons (VV)
+   standing in for the dot between the words. Everything scales with
+   the element's font-size. */
+.vv-mark {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.2em;
+  font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.vv-rule {
+  display: block;
+  height: max(2px, 0.035em);
+  background: currentColor;
+}
+
+.vv-line {
+  display: flex;
+  align-items: center;
+  gap: 0.16em;
+  letter-spacing: 0.06em;
+}
+
+.vv-line > span:last-child {
+  margin-right: -0.06em; /* cancel the trailing letter-spacing so the rules line up */
+}
+
+.vv-chev {
+  flex-shrink: 0;
+  width: 0.43em;
+  height: 0.42em;
+  fill: currentColor;
 }
 
 /* Era menu — appears top-right once the intro settles */
@@ -562,10 +600,7 @@ main {
   position: absolute;
   left: 24px;
   bottom: 32px;
-  font-weight: 800;
-  font-size: clamp(110px, 15vw, 220px);
-  line-height: 0.8;
-  letter-spacing: -0.05em;
+  font-size: clamp(40px, 5.6vw, 100px);
   color: var(--bg-page);
   text-decoration: none;
 }
@@ -901,7 +936,7 @@ main {
 
 /* ---------- Footer ---------- */
 /* Built by footer.js. An oxblood band that mirrors the intro: statement +
-   links up top, a giant JIST across the full width, small print below. */
+   links up top, a large Veni Vidi wordmark, small print below. */
 .site-footer {
   overflow: hidden;
   background: var(--panel);
@@ -977,12 +1012,11 @@ main {
 
 /* Giant wordmark, sized to span the page and cropped slightly at the bottom */
 .footer-word {
-  margin: 0 0 -0.12em;
-  padding: 0 12px;
-  font-weight: 800;
-  font-size: 53vw;
-  line-height: 0.8;
-  letter-spacing: -0.06em;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px 24px 72px;
+  font-size: 12.6vw;
   white-space: nowrap;
   user-select: none;
 }
@@ -1049,12 +1083,20 @@ main {
 
   .intro-word {
     left: 14px;
-    bottom: 200px;
+    top: 40px;
+    font-size: 12.5vw;
   }
 
+  /* On a phone the painting stays full width, so the wordmark stays up top
+     (just under the era menu) instead of dropping onto the subject. */
   .intro.is-settled .intro-word {
-    bottom: 84px;
-    font-size: clamp(90px, 28vw, 160px);
+    top: 116px;
+    transform: translateY(0);
+    font-size: 11vw;
+  }
+
+  .footer-word {
+    padding: 8px 14px 40px;
   }
 
   .intro-caption {
@@ -1168,6 +1210,7 @@ main {
   .tl-word {
     left: 14px;
     bottom: 20px;
+    font-size: 11vw;
   }
 
   .site-nav {

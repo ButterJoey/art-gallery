@@ -1,5 +1,5 @@
 /*
-  Runs the JIST intro, renders the gallery grid from ARTWORKS (defined in
+  Runs the Veni Vidi intro, renders the gallery grid from ARTWORKS (defined in
   art.js) and handles the era menu + search filtering. The pop-up lives in modal.js.
   You shouldn't need to edit this file to add new art — just edit art.js.
 */
@@ -26,7 +26,7 @@ let activeEra = "All";
 
 const INTRO_STEPS = [
   ["is-panel", 300],  // panel wipes in
-  ["is-word", 1500],  // JIST rises
+  ["is-word", 1500],  // wordmark rises
   ["is-art", 2500],   // featured piece slides in behind
 ];
 const INTRO_SEEN_KEY = "jistIntroSeen";

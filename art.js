@@ -20,7 +20,7 @@
   - year:        year or date made (can be a string like "c. 1889" or "Unknown")
   - depicted:    (optional) year of the event/scene shown, e.g. "1815" or "325 BC".
                  Shown as a small badge on the gallery tile.
-  - featured:    (optional) true = this piece slides in behind the JIST intro
+  - featured:    (optional) true = this piece slides in behind the Veni Vidi intro
                  and gets a large "Featured" tile. Only one piece should have it.
   - medium:      what it's made of/with (e.g. "Oil on canvas", "Watercolor", "Lithograph")
   - tags:        an array of category labels, e.g. ["Napoleonic Wars"].
