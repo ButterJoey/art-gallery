@@ -143,7 +143,7 @@ const ARTWORKS = [
     title: "Ottoman Sipahi and Aragonese Mercenary",
     artist: "Jose Daniel Cabrera Peña",
     year: "2014",
-    depicted: "May 29, 1453",
+    depicted: "1453",
     medium: "Oil on Canvas",
     tags: ["Ottoman / Byzantine History"],
     image: "images/Ottoman Sipahi and Aragonese Mercenary.jpg",
