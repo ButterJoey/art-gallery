@@ -151,6 +151,17 @@ const ARTWORKS = [
       "This piece illustrates the aftermath of the Fall of Constantinople, 1453. An Ottoman Sipahi (professional cavalryman) looks down at a fallen Aragonese mercenary (Elite Infantryman) after the fall of the city, with a Byzantine flag on the floor beside him. This defining moment in history was the end of the Byzantine Empire, ending the Roman imperial legacy in the world. Many historians use this point as the end of Medieval times and the beginning of the modern era."
   },
   {
+    title: "The Death of Caesar",
+    artist: "Jean-Léon Gérôme",
+    year: "1867",
+    depicted: "44 BC",
+    medium: "Oil on Canvas",
+    tags: ["Ancient History"],
+    image: "images/Death of Caesar.jpg",
+    description:
+      "In the distinct style of Gérôme, he depicts the direct aftermath of Julius Caesar's assassination. By conquest and politics, Julius Caesar rose to be the dictator of the Roman Empire. His rapid rise to power would be his downfall when the 70 Senators turned on him, assassinating him in the Theatre of Pompey. Despite popular belief, Julius Caesar did not say, “Et tu, Brute?” That is from the Shakespearean historical fiction depiction of the death of Caesar. This might have also been taken from the Roman historian Suetonius, who claimed that Caesar said “Kai su, teknon,” translating to “You too, child?”, referring to Brutus. However, the Greek historian Plutarch wrote that Caesar said nothing. That Caesar pulled his tunic over his head after seeing Brutus and letting out a groan as he was stabbed."
+  },
+  {
     title: "Alexander the Great Refuses Water in the Desert",
     artist: "Tom Lovell",
     year: "1968",
@@ -160,7 +171,7 @@ const ARTWORKS = [
     image: "images/Alexander the Great Refuses Water in the Desert.jpeg",
     description:
       "Around 325 BC, Alexander the Great returns from his conquest in India. His journey takes him through the deadly Gedrosian Desert, his army is dangerously dehydrated and exhausted. A soldier managed to find some water and gave it to Alexander in a helmet, however, in a genius stroke of leadership, he spilled the water on the ground. Alexander shows his solidarity to his men, not willing to let his men suffer while he does not."
-  }
+  },
 ];
 
 /*
