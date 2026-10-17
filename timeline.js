@@ -39,7 +39,8 @@ function parseYear(value) {
 }
 
 function formatYear(n) {
-  return n < 0 ? `${-n} BC` : String(n);
+  if (n < 0) return `${-n} BC`;
+  return n < 500 ? `${n} AD` : String(n); // "9 AD" reads better than a bare "9"
 }
 
 function gapLabel(art) {

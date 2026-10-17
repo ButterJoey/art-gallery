@@ -151,6 +151,17 @@ const ARTWORKS = [
       "This piece illustrates the aftermath of the Fall of Constantinople, 1453. An Ottoman Sipahi (professional cavalryman) looks down at a fallen Aragonese mercenary (Elite Infantryman) after the fall of the city, with a Byzantine flag on the floor beside him. This defining moment in history was the end of the Byzantine Empire, ending the Roman imperial legacy in the world. Many historians use this point as the end of Medieval times and the beginning of the modern era."
   },
   {
+    title: "Furor Teutonicus",
+    artist: "Paja Jovanovic",
+    year: "1899",
+    depicted: "9 AD",
+    medium: "Oil on Canvas",
+    tags: ["Ancient History"],
+    image: "images/Furor teutonicus.jpg",
+    description:
+      "In September of 9 AD, Arminius, a Cheruscan noble who had actually served as a Roman officer, led an alliance of German tribes in an ambush against three Roman legions commanded by governor Publius Quinctilius Varus. Arminius drew out the Roman column making it span over a couple of miles so that the legions could not form proper lines of battle. After the brutal ambush, 15,000-30,000 Romans were killed, all three legion eagles were captured, and Varus would commit suicide. In the aftermath of the battle it is said that Augustus cried, “Varus, give me back my legions!” launching a revenge campaign under Germanicus from 14-16 AD, successfully recovering two of the eagles."
+  },
+  {
     title: "The Death of Caesar",
     artist: "Jean-Léon Gérôme",
     year: "1867",
