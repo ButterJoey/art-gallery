@@ -151,6 +151,17 @@ const ARTWORKS = [
       "This piece illustrates the aftermath of the Fall of Constantinople, 1453. An Ottoman Sipahi (professional cavalryman) looks down at a fallen Aragonese mercenary (Elite Infantryman) after the fall of the city, with a Byzantine flag on the floor beside him. This defining moment in history was the end of the Byzantine Empire, ending the Roman imperial legacy in the world. Many historians use this point as the end of Medieval times and the beginning of the modern era."
   },
   {
+    title: "Battle of Agincourt",
+    artist: "William Kent",
+    year: "1729",
+    depicted: "1415",
+    medium: "Oil on Canvas",
+    tags: ["Medieval"],
+    image: "images/Battle of Agincourt.jpg",
+    description:
+      "The Battle of Agincourt was the biggest military upset during the later part of the 100 Years' War between England and France. King Henry V led a sick and exhausted army through northern France consisting of about 6,000 to 8,100 men (mostly skilled longbowmen). They were being hunted by the combined French army consisting of about 14,000 to 30,000 men (heavy cavalry and armored knights). In the muddy, freshly plowed lands near the town of Agincourt, the two armies faced off. The English began to advance, baiting the French to advance as well before they set up defensive lines by having their archers plant wooden stakes into the ground to stop cavalry charges. The French started by charging with their heavy cavalry in an attempt to wipe out the English longbowmen however, slowed down by mud and repelled by the sharp wooden stakes, many of them were killed by arrowfire and retreated. Nevertheless, the French main force of dismounted knights assaulted the English center. In the slog of battle and without the French reserves, they were slaughtered. In the end around 600 English were killed, but the French lost around 6,000 men, including many high nobles."
+  },
+  {
     title: "Furor Teutonicus",
     artist: "Paja Jovanovic",
     year: "1899",
@@ -195,6 +206,7 @@ const ARTWORKS = [
 const ERA_MENU = [
   { label: "Napoleonic", tags: ["Napoleonic Wars"] },
   { label: "American", tags: ["American Revolution", "American Civil War", "War of 1812", "American History"] },
-  { label: "Ancient", tags: ["Ancient History", "Ottoman / Byzantine History"] },
+  { label: "Medieval", tags: ["Medieval", "Ottoman / Byzantine History"] },
+  { label: "Ancient", tags: ["Ancient History"] },
   { label: "Modern", tags: ["Religious / Allegorical"] },
 ];
